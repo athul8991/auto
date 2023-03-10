@@ -1,0 +1,89 @@
+<%-include ('partials/adminHeader')%>
+<h3 class="heading"><%=head%></h3>
+
+<hr class="al-hr">
+<div class="container">
+  <form method="post" action="/add" enctype="multipart/form-data">
+  <div class="row bord">
+    
+    
+      <div class="col-xl-6 m-auto bord">
+        <!-- ////////////////////////////////////////// COMMON TOP START /////////////////////////////// -->
+        <!-- image upload -->
+       
+        <%-include('menu/imgtitle') %>
+        <!-- iend -->
+        <!-- project Name -->
+        <%-include('menu/projectName') %>
+        <!-- project Name end -->
+        
+       <!-- description -->
+       <%-include('menu/description') %>
+       
+
+       <!-- end -->
+        
+        
+        <!-- col lft end -->
+
+        
+<!-- *************************** TyPE CHANGE *****************************  -->
+          <% if(type){%>
+            <%-include('menu/type') %>
+            <%} %>
+        
+
+
+   <!-- *************************** TyPE CHANGE *****************************  -->
+        
+        <!-- listed By -->
+       <%-include('menu/listedBy') %>
+       <!-- listed by end -->
+
+       <!-- ////////////////////////////////////////// COMMON TOP END /////////////////////////////// -->
+
+       <!-- ////////////////////////////////////////// CHANGE ITEMS /////////////////////////////// -->
+       <% if(menCheck =='lp'){ %>
+
+       <%- include('menu/plotA') %>
+
+        <%- include('menu/length') %>
+
+        <%-include('menu/bredth') %>
+      
+        
+        <%-include('menu/facing') %>
+        <% }else if(menCheck =='sh&a'){%>
+          <%-include('menu/bedbath') %>
+          <%- include('menu/furnish') %>
+          <%- include('menu/plotA') %>
+
+        <%- include('menu/length') %>
+
+        <%-include('menu/bredth') %>
+      
+        
+        <%-include('menu/facing') %>
+        
+          <%}%>
+
+      <!-- ////////////////////////////////////////// CHANGE ITEMS /////////////////////////////// -->
+
+
+       <!-- //////////////////////////////////////// COMMON BOTTOM START  ///////////////////// -->
+       
+<!-- price-->
+<%- include('menu/price') %>
+        </div>
+       <%- include('menu/button') %>
+        </div>
+        </div>
+      </form>
+     
+      
+
+</div>
+<div class="foot">
+<%-include('partials/footer')%>
+</div>
+<!-- ////////////////////////////////////////// COMMON BOTTOM END /////////////////////////////// -->
