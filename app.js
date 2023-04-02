@@ -21,7 +21,7 @@ const mongoose = require("mongoose");
 const res = require('express/lib/response');
 
 mongoose.set('strictQuery', false);
-mongoose.connect("mongodb://localhost:27017/ojilStore",{useNewUrlParser:true}).then(()=>{
+mongoose.connect("mongodb+srv://athuls8991:"+process.env.MONGOPASS+"@cluster0.ityc9mx.mongodb.net/ojilStore",{useNewUrlParser:true}).then(()=>{
     console.log("connected");
 }).catch((err)=>{
     console.log("Connection error : "+err);
