@@ -81,13 +81,13 @@
             <div class="container-fluid">
 
                     <%if(menuselect==="bigadmin"){%>
-                    <%-include('admin_comp/bigadmincomp',{data:stafList})%>
+                    <%-include('admin_Comp/bigadmincomp',{data:stafList})%>
 
                     <%}else if(menuselect ==="adadmin"){%>
-                    <%- include('admin_comp/adadmin') %>
+                    <%- include('admin_Comp/adadmin') %>
 
                     <%}else if (menuselect ==='editadmin'){%>
-                    <%-include("admin_comp/editadmin",{List :stafList})%>
+                    <%-include("admin_Comp/editadmin",{List :stafList})%>
 
                     <%}else{%>
                     <%}%>
