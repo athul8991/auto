@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("input").keyup(function(data){
+    let value = $('input').val();
+
+    if(checknumeric(value)){
+
+      if(checkLength(value.length)){
+        console.log("This is not a phonenumber");
+      }else{
+        console.log("this is phonenumber");
+      }
+    }else{
+      console.log("Enter a correct value")
+    }
+  
+
+  });
+});
+
+function checknumeric(CheckItem){
+  if($.isNumeric(CheckItem)){
+    return true;
+  }else{
+    return false;
+  }
+}
+
+//function checkBspace(CheckItem){
+  //if(CheckItem ==8){
+    //return true;
+  //}else{
+    //return false;
+  //}
+//}
+
+function checkLength(checkItem){
+  if(checkItem <10 || checkItem >10){
+    return true;
+  }else{
+    return false;
+  }
+}
+
+</script>
+</head>
+<body>
+
+Enter your name: <input type="text">
+
+<p>Keypresses: <span >0</span></p>
+<span class="check">
+    
+</span>
+
+</body>
+</html>

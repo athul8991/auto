@@ -1,0 +1,46 @@
+<% var tAdmin = 0;%>
+<%if(stafList !=false){%>
+
+<%for(var i =0;i<stafList.length;i++){%>
+  <%tAdmin++%>
+  <%console.log(tAdmin)%>
+  
+<%}}%>
+
+<div class="row">
+
+<div class="col-md-4 snipet-container">
+    <div class="snip-body admin">
+      <div class="snip-head ">
+        <h3>Admin</h3>
+      </div>
+      <h4 class="number"> Admins <%=tAdmin%></h4><br>
+      <h4 class="number"> Online 5</h4><br>
+      <h4 class="number"> Offline 2</h4>
+    </div>
+
+
+  </div>
+  <div class="col-md-4 snipet-container ">
+    <div class="snip-body ad">
+      <div class="snip-head">
+        <h3>Ad</h3>
+        <h5 id="hea"></h5>
+      </div>
+      <h4 class="number"> Ads 100</h4><br>
+      <h4 class="number"> Online 70</h4><br>
+      <h4 class="number"> Offline 30</h4>
+    </div>
+
+  </div>
+  <div class="col-md-4 snipet-container ">
+    <div class="snip-body aproove">
+      <div class="snip-head">
+        <h3>Aproove</h3>
+      </div>
+      <h4 class="number">Aproove list 500</h4><br>
+      <h4 class="number"> Aprooved list 450</h4><br>
+      <h4 class="number"> Waiting list 50 </h4>
+    </div>
+  </div>
+  </div>

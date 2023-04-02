@@ -44,6 +44,7 @@
 
        <!-- ////////////////////////////////////////// CHANGE ITEMS /////////////////////////////// -->
        <% if(menCheck =='lp'){ %>
+        <!-- check lands and plots -->
 
        <%- include('menu/plotA') %>
 
@@ -54,18 +55,55 @@
         
         <%-include('menu/facing') %>
         <% }else if(menCheck =='sh&a'){%>
+          <!-- check sale house and appartments -->
           <%-include('menu/bedbath') %>
           <%- include('menu/furnish') %>
-          <%- include('menu/plotA') %>
+          <%- include('menu/conStatus') %>
+          <%- include('menu/sbArea') %>
+          <%- include('menu/carpArea') %>
+          <%- include('menu/maintanence') %>
+          <%- include('menu/ttlFloor') %>
+          <%- include('menu/floorNo') %>
+          <%- include('menu/carPark') %>
 
-        <%- include('menu/length') %>
 
-        <%-include('menu/bredth') %>
+     
       
         
         <%-include('menu/facing') %>
+        <!-- rent house and apartments -->
         
-          <%}%>
+          <%}else if(menCheck =='rh&a'){%>
+            <%-include('menu/bedbath') %>
+          <%- include('menu/furnish') %>
+          <%- include('menu/sbArea') %>
+          <%- include('menu/carpArea') %>
+          <%- include('menu/bat') %>
+          <%- include('menu/maintanence') %>
+          <%- include('menu/ttlFloor') %>
+          <%- include('menu/floorNo') %>
+          <%- include('menu/carPark') %>
+       
+      
+        
+        <%-include('menu/facing') %>
+
+            <%} else if(menCheck =='ss&o' || menCheck=='rs&o'){%>
+              <%- include('menu/furnish') %>
+          <%- include('menu/conStatus') %>
+          <%- include('menu/sbArea') %>
+          <%- include('menu/carpArea') %>
+          <%- include('menu/maintanence') %>
+          <%- include('menu/carPark') %>
+          <%- include('menu/wash') %>
+
+              <%}else if(menCheck=='p&gh'){%>
+                <%- include('menu/furnish') %>
+                <%- include('menu/carPark') %>
+                <%- include('menu/meals') %>
+
+                <%} %>
+              <!-- sale shops and offices -->
 
       <!-- ////////////////////////////////////////// CHANGE ITEMS /////////////////////////////// -->
 

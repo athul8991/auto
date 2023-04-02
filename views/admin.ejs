@@ -1,5 +1,80 @@
 <%-include ('partials/adminHeader')%>
 
+<style>
+    .list-container{
+        width: 40%;
+        margin: auto;
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+    @media only screen and (max-width: 600px){
+        .list-container{
+            width: 100%;
+            margin: auto;
+            margin-top: 2%;
+            margin-bottom: 2%;
+        }
+    }
+    @media only screen and(min-width:601px){
+        .list-container{
+            width: 60%;
+            margin: auto;
+            margin-top: 2%;
+            margin-bottom: 2%;
+        }
+    }
+    a{
+        text-decoration: none;
+    }
+    .icon_right{
+        float: right;
+        margin-right: 10px;
+       
+    }
+    .text_left{
+        float: right;
+    }
+    .chec {
+        visibility:hidden;
+    }
+    .active:active{
+       color: rgb(255, 0, 0);
+    }
+    h6{
+        display: inline-block;
+    }
+</style>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 list-container">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <h6 class="">Title</h6>
+                    <h6 class="text_left">Options</h6>
+                </li>
+
+                <%dataSend.forEach((data)=>{%>
+
+                    <li class="list-group-item ">
+                        <a class="list-group-item-action" href="#"><%=data.data.plotT%></a>
+                            <i class="  fa-solid fa-trash  icon_right active" data-toggle="tooltip" data-placement="bottom" title="Delete"></i>
+                        
+                        <i class="fa-sharp fa-solid fa-pen-to-square icon_right  active" data-toggle="tooltip" data-placement="bottom" title="Edit"></i>
+                        <a class="list-group-item-action" href="/aproove/<%=data._id %>">
+                        <i class="fa-solid fa-square-check icon_right active" data-toggle="tooltip" data-placement="bottom" title="Aproove" ></i>
+                        </a>
+                        
+
+                    </li>
+
+                <%})%>
+                
+                
+              </ul>
+        </div>
+    </div>
+</div>
+
 <div class="foot">
 <%-include('partials/footer')%>
 </div>
